@@ -1,8 +1,4 @@
-import { useState } from 'react';
-
-const Header = () => {
-  const [activeSection, setActiveSection] = useState('about');
-
+const Header = ({ activeSection, onNavClick }) => {
   return (
     <header className="header">
       <div className="navbar">
@@ -12,17 +8,17 @@ const Header = () => {
         <nav className="nav-items">
           <ul>
             <li className={activeSection === 'about' ? 'active' : ''}>
-              <a href="#about" onClick={() => setActiveSection('about')}>
+              <a href="#about" onClick={() => onNavClick('about')}>
                 About Me
               </a>
             </li>
             <li className={activeSection === 'projects' ? 'active' : ''}>
-              <a href="#projects" onClick={() => setActiveSection('projects')}>
+              <a href="#projects" onClick={() => onNavClick('projects')}>
                 Projects
               </a>
             </li>
             <li className={activeSection === 'contact' ? 'active' : ''}>
-              <a href="#contact" onClick={() => setActiveSection('contact')}>
+              <a href="#contact" onClick={() => onNavClick('contact')}>
                 Contact
               </a>
             </li>
