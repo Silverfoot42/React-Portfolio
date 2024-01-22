@@ -22,6 +22,11 @@ const Header = ({ activeSection, onNavClick }) => {
                 Contact
               </a>
             </li>
+            <li className={activeSection === 'resume' ? 'active' : ''}>
+              <a href="#resume" onClick={() => onNavClick('resume')}>
+                Resume
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
