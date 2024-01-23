@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const projects = [
   {
     title: 'Movies Worth Your Time',
@@ -38,11 +40,34 @@ const projects = [
 ]
 
 const Content = ({ activeSection }) => {
+
+  const resumeLink = '';
+  const proficiencies = ['HTML', 'CSS', 'Javascript', 'Node', 'Bootstrap', 'React', 'MYSQL', 'MongoDB', 'Insomnia', 'Git']
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [notification, setNotification] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !message) {
+      setNotification('All fields are required');
+    } else {
+      setNotification('Message Sent');
+    }
+  };
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   return (
     <div className="content">
       {activeSection === 'about' && (
         <section className="about">
-
           <div className="bio">
             <h2>About Me</h2>
             <div className="profile-picture">
@@ -78,11 +103,68 @@ const Content = ({ activeSection }) => {
 
       {activeSection === 'contact' && (
         <section className="contact">
+          <h2>Contact Me</h2>
+          {notification && <p>{notification}</p>}
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              onBlur={() => {
+                if (!name) {
+                  setNotification('Name field is required');
+                }
+              }}
+            />
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onBlur={() => {
+                if (!email) {
+                  setNotification('Email field is required');
+                } else if (!isValidEmail(email)) {
+                  setNotification('Invalid email address');
+                }
+              }}
+            />
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              onBlur={() => {
+                if (!message) {
+                  setNotification('Message field is required');
+                }
+              }}
+            />
+            <button type="submit">Submit</button>
+          </form>
         </section>
       )}
 
       {activeSection === 'resume' && (
         <section className="resume">
+          <h2>My Resume</h2>
+          <p>
+            <a href={resumeLink} download>
+              Download Resume
+            </a>
+          </p>
+          <h3>Proficiencies</h3>
+          <ul>
+            {proficiencies.map((proficiency, index) => (
+              <li key={index}>{proficiency}</li>
+            ))}
+          </ul>
         </section>
       )}
     </div>

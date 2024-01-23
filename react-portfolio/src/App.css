@@ -191,3 +191,92 @@ p {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.contact label {
+  margin-bottom: 8px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.contact button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #0056b3;
+}
+
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.resume h2 {
+  color: yellow;
+}
+
+.resume p {
+  margin: 10px 0;
+}
+
+.resume a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.resume a:hover {
+  text-decoration: underline;
+}
+
+.resume h3 {
+  color: yellow;
+}
+
+.resume ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume li {
+  margin-bottom: 5px;
+  color: yellow;
+}
+
+.resume .download-link {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.resume .download-link a {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.resume .download-link a:hover {
+  background-color: #0056b3;
+}
