@@ -65,11 +65,10 @@ const Content = ({ activeSection }) => {
             {projects.map((project, index) => (
               <div key={index} className="project-card">
                 <h3>{project.title}</h3>
-                <div className="project-background" style={{ backgroundImage: `url(${project.image})` }}>
-                  <div className="project-links">
+                <div className="project-background" style={{ backgroundImage: `url(${project.image})` }}></div>
+                <div className="project-links">
                     <a href={project.deploymentLink}>View Project</a>
                     <a href={project.repositoryLink}>GitHub Repository</a>
-                  </div>
                 </div>
               </div>
             ))}
