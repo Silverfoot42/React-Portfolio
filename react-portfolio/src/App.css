@@ -44,19 +44,14 @@
   color: #ffcc00;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .content {
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 180px;
   padding: 20px;
   text-align: center;
+  flex-grow: 1;
 }
 
 h2 {
@@ -279,4 +274,47 @@ p {
 
 .resume .download-link a:hover {
   background-color: #0056b3;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.3s ease;
+}
+
+.social-links img:hover {
+  filter: brightness(1.5);
+}
+
+.icon-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.icon-links li {
+  margin-bottom: 10px;
+}
+
+.icon-links a {
+  color: white;
+  text-decoration: none;
 }

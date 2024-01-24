@@ -41,7 +41,7 @@ const projects = [
 
 const Content = ({ activeSection }) => {
 
-  const resumeLink = '';
+  const resumeLink = 'https://drive.google.com/file/d/1qyZK8pJfC2qoUOHhvGI1sP3seHqrHdim/view?usp=sharing';
   const proficiencies = ['HTML', 'CSS', 'Javascript', 'Node', 'Bootstrap', 'React', 'MYSQL', 'MongoDB', 'Insomnia', 'Git']
 
   const [name, setName] = useState('');
