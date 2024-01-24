@@ -1,6 +1,5 @@
 .header {
-  background-color: #333;
-  color: white;
+  color: #03b5aaff;
   position: fixed;
   top: 0;
   width: 100%;
@@ -20,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  background-color: #333;
+  background-color: #6f2dbdff;
 }
 
 .nav-items ul {
@@ -36,12 +35,12 @@
 
 .nav-items a {
   text-decoration: none;
-  color: white;
+  color: #03b5aaff;
 }
 
 .nav-items li.active a {
   font-weight: bold;
-  color: #ffcc00;
+  color: #f5cda7ff;
 }
 
 .content {
@@ -55,7 +54,7 @@
 }
 
 h2 {
-  color: yellow;
+  color: #f5cda7ff;
 }
 
 p {
@@ -89,10 +88,10 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #007bff;
+  background-color: #1b3022ff;
   overflow: hidden;
   position: relative;
-  color: white;
+  color: #03b5aaff;
 }
 
 .project-card a {
@@ -227,10 +226,6 @@ p {
   text-align: center;
 }
 
-.resume h2 {
-  color: yellow;
-}
-
 .resume p {
   margin: 10px 0;
 }
@@ -245,7 +240,7 @@ p {
 }
 
 .resume h3 {
-  color: yellow;
+  color: #f5cda7ff;
 }
 
 .resume ul {
@@ -255,7 +250,7 @@ p {
 
 .resume li {
   margin-bottom: 5px;
-  color: yellow;
+  color: #f5cda7ff;
 }
 
 .resume .download-link {
@@ -277,8 +272,8 @@ p {
 }
 
 .footer {
-  background-color: #333;
-  color: white;
+  background-color: #6f2dbdff;
+  color: #03b5aaff;
   padding: 20px;
   text-align: center;
   margin-top: auto;
@@ -315,6 +310,6 @@ p {
 }
 
 .icon-links a {
-  color: white;
+  color: #03b5aaff;
   text-decoration: none;
 }
