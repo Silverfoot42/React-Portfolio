@@ -19,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  background-color: #6f2dbdff;
+  background-color: #1b3022ff;
 }
 
 .nav-items ul {
@@ -272,7 +272,7 @@ p {
 }
 
 .footer {
-  background-color: #6f2dbdff;
+  background-color: #1b3022ff;
   color: #03b5aaff;
   padding: 20px;
   text-align: center;
